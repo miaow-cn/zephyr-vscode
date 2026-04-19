@@ -1,0 +1,15 @@
+{
+    "terminal.integrated.env.linux": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv"
+    },
+    "terminal.integrated.profiles.linux": {
+        "bash (venv)": {
+            "path": "bash",
+            "args": ["--rcfile", "${workspaceFolder}/.vscode/scripts/venv-rc.sh"]
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "bash (venv)",
+    "C_Cpp.default.compileCommands": [
+        "${workspaceFolder}/.vscode/build/compile_commands.json"
+    ]
+}
