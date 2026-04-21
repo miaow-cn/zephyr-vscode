@@ -11,5 +11,6 @@
     "terminal.integrated.defaultProfile.linux": "bash (venv)",
     "C_Cpp.default.compileCommands": [
         "${workspaceFolder}/.vscode/build/compile_commands.json"
-    ]
+    ],
+    "editor.tabSize": 8
 }
