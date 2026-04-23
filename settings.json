@@ -12,6 +12,6 @@
     "C_Cpp.default.compileCommands": [
         "${workspaceFolder}/.vscode/build/compile_commands.json"
     ],
-    "C_Cpp.clang_format_style": "file:${workspaceFolder}/zephyr/.clang-format",
+    "C_Cpp.clang_format_style": "file:${workspaceFolder}/.vscode/.clang-format",
     "editor.tabSize": 8
 }
