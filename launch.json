@@ -11,9 +11,9 @@
             "toolchainPrefix": "arm-zephyr-eabi",
             "gdbPath": "/path/to/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb",
             "servertype": "jlink",
-            "device": "STM32H743XI?BankAddr=0x90000000&Loader=CLK@PF10_nCS@PG6_D0@PF8_D1@PF9_D2@PF7_D3@PF6",
+            "device": "RW612",
             "interface": "swd",
-            "svdFile": "${workspaceFolder}/.vscode/svd/stm32h743.svd",
+            "svdFile": "${workspaceFolder}/.vscode/svd/rw612.svd",
             "runToEntryPoint": "main"
         },
         {
@@ -26,9 +26,9 @@
             "toolchainPrefix": "arm-zephyr-eabi",
             "gdbPath": "/path/to/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb",
             "servertype": "jlink",
-            "device": "STM32H743XI?BankAddr=0x90000000&Loader=CLK@PF10_nCS@PG6_D0@PF8_D1@PF9_D2@PF7_D3@PF6",
+            "device": "RW612",
             "interface": "swd",
-            "svdFile": "${workspaceFolder}/.vscode/svd/stm32h743.svd"
+            "svdFile": "${workspaceFolder}/.vscode/svd/rw612.svd"
         }
     ]
 }

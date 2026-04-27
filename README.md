@@ -32,7 +32,7 @@ The `device` value follows J-Link syntax:
 Example:
 
 ```text
-STM32H743XI?BankAddr=0x90000000&Loader=CLK@PF10_nCS@PG6_D0@PF8_D1@PF9_D2@PF7_D3@PF6
+RW612
 ```
 
 This value is assembled in CMake from `BOARD_RUNNER_ARGS_jlink`.
@@ -90,7 +90,7 @@ endif()
 1. Build any app, for example:
 
 ```bash
-west build -d app/98-cpp/build app/98-cpp -b fk743m5_xih6
+west build -d my-app/build my-app -b frdm_rw612
 ```
 
 2. After build, `setup.py` updates `.vscode/build` and `.vscode/launch.json`.
