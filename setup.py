@@ -6,6 +6,7 @@ import argparse
 import json
 import os
 from pathlib import Path
+import subprocess
 
 
 class _Parser(argparse.ArgumentParser):
@@ -107,8 +108,20 @@ def update_launch_json(
     with launch_json.open("w", encoding="utf-8") as handle:
         json.dump(data, handle, indent=4)
         handle.write("\n")
-
+    
     print(f"setup.py: updated {launch_json}")
+    assume_unchanged(launch_json)
+
+def assume_unchanged(file_name: Path) -> None:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    result = subprocess.run(
+        ["git", "update-index", "--assume-unchanged", str(file_name)],
+        cwd=script_dir,
+        capture_output=True,
+        text=True
+    )
+    print(f"setup.py: {file_name} is now assumed unchanged by git. ")
+    print(f"\tIf you want to track changes again, run: git update-index --no-assume-unchanged {file_name}")
 
 
 def main() -> int:
@@ -140,6 +153,7 @@ def main() -> int:
         device=args.device,
         toolchain_prefix=infer_toolchain_prefix(gdb_path),
     )
+
     return 0
 
 
